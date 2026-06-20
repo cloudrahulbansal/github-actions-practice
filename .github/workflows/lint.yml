@@ -16,6 +16,11 @@ jobs:
     steps:
       - name: checkout/clone the code
         uses: actions/checkout@v7
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
         
     #this step will install linting tool
       - name: Install linter
